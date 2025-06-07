@@ -18,7 +18,11 @@ public class Main {
         // A Person's id can never change
         // A person's age can change
         //
-        // ----
+        Person Patrick = new Person("E001","Patrick",35, new int[]{1, 2, 3, 2, 1});
+        Person Jesus = new Person("E002","Jesus",2025, new int[]{3, 4, 3, 4, 1});
+        Person Michael = new Person("E003","Michael",20, new int[]{4, 4, 4, 4, 1});
+        Person Gabriel = new Person("E004","Gabriel",21, new int[]{4, 4, 4, 4, 4});
+        Person Abaddon = new Person("E005","Abaddon",28, new int[]{3, 3, 3, 4, 3});
         //
         // Create a class "Grading" in the at.pxnet package
         // Since it is a utility class, it should not expose any constructors
@@ -27,7 +31,22 @@ public class Main {
         // they have at least one "5" or at least three "4" in their grades. If a person does not have at least two
         // grades, the method throws an IllegalStateException, regardless of the grades
         //
-        // ---
+        University University = new University();
+        University.addStudent(Patrick);
+        University.addStudent(Jesus);
+        University.addStudent(Michael);
+        University.addStudent(Gabriel);
+        University.addStudent(Abaddon);
+
+        System.out.println("\nAll students in University");
+        for (Person person : University.getStudents()) {
+            System.out.println(person.getName() + " (" + person.getAge() + ")");
+        }
+        System.out.println("\nstudents in risk of failing:");
+        for (Person person : University.getFailingStudents()){
+            System.out.println(person.getName());
+        }
+        System.out.printf("\nAverageAge: %.2f\n", University.getAverageAge());
         //
         // Create a class "University" in the at.pxnet package.
         // It should only have the default constructor
