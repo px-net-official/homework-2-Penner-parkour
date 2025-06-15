@@ -5,13 +5,13 @@ import java.util.Arrays;
 
 
 public class Person {
-    private final String ID;
+    private final String id;
     private String name;
     private int age;
     private int[] grades;
 
     public Person(String ID, String name, int age, int[] grades) {
-        this.ID = ID;
+        this.id = ID;
         this.name = name;
         this.age = age;
         setGrades(grades);
@@ -29,6 +29,10 @@ public class Person {
             }
         }
         this.grades = Arrays.copyOf(grades, grades.length);
+    }
+
+    public String getID() {
+        return id;
     }
 
     public String getName() {
