@@ -8,9 +8,9 @@ public final class Grading {
     public static boolean isFailing(Person person) {
         int[] grades = person.getGrades();
 
-        //if(grades.length < 2) {
-        //    throw new IllegalStateException("Grading requires at least two students");
-        //}
+        if(grades.length < 2) {
+        throw new IllegalStateException("Grading requires at least two students");
+        }
 
         int countFours = 0;
         for (int grade : grades) {
@@ -21,9 +21,6 @@ public final class Grading {
                 countFours++;
             }
         }
-        if (countFours >= 3) {
-            return true;
+        return countFours >= 3;
         }
-        return false;
-    }
 }

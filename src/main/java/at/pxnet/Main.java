@@ -18,11 +18,11 @@ public class Main {
         // A Person's id can never change
         // A person's age can change
         //
-        Person Patrick = new Person("E001","Patrick",35, new int[]{1, 2, 3, 2, 1});
-        Person Jesus = new Person("E002","Jesus",2025, new int[]{3, 4, 3, 4, 1});
-        Person Michael = new Person("E003","Michael",20, new int[]{4, 4, 4, 4, 1});
-        Person Gabriel = new Person("E004","Gabriel",21, new int[]{4, 4, 4, 4, 4});
-        Person Abaddon = new Person("E005","Abaddon",28, new int[]{3, 3, 3, 4, 3});
+        Person Patrick = new Person("1","Patrick",35, new int[]{1, 2, 3, 2, 1});
+        Person Jesus = new Person("2","Jesus",2025, new int[]{3, 4, 3, 4, 1});
+        Person Michael = new Person("3","Michael",20, new int[]{4, 4, 4, 4, 1});
+        Person Gabriel = new Person("4","Gabriel",21, new int[]{4, 4, 4, 4, 4});
+        Person Abaddon = new Person("5","Abaddon",28, new int[]{3, 3, 3, 4, 3});
         //
         // Create a class "Grading" in the at.pxnet package
         // Since it is a utility class, it should not expose any constructors
